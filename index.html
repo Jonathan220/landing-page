@@ -12,8 +12,7 @@
     <section class="showcase">
         <header>
             <h1 class="logo">Travel</h1>
-            <div class="toggle"><i class="fas fa-bars fa-2x"></i></div>
-            <!-- <div class="toggle"><i class="fas fa-times fa-2x"></i></div> -->
+            <div class="toggle"></div>
         </header>
         <video src="assets/video/video.mp4" muted loop autoplay disablePictureInPicture></video>
         <div class="overlay"></div>
@@ -24,9 +23,22 @@
             <a href="#">Explore</a>
         </div>
         <ul class="social">
-            <li><i class="fab fa-facebook-square fa-2x"></i></li>
-            <li><i class="fab fa-twitter-square fa-2x"></i></li>
-            <li><i class="fab fa-instagram-square fa-2x"></i></li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+            </li>
+                
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram-square fa-2x"></i>
+                </a>
+            </li>
         </ul>
     </section>
 
@@ -39,5 +51,14 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
+    <script>
+        const menutoggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menutoggle.addEventListener('click', () => {
+                menutoggle.classList.toggle('active');            
+                showcase.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
